@@ -1,6 +1,6 @@
 # Digital Rock, Paper, Scissors App
 
-Rock, Paper, Scissors game written with HTML, CSS and JavaScript
+Digital Rock, Paper, Scissors game written with HTML, CSS and JavaScript
 
 Play [here](https://rnbrietzke10.github.io/rockPaperScissorsApp/)
 

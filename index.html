@@ -4,48 +4,58 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Rock, Paper, Scissors</title>
 	</head>
 	<body>
-    <h2 id="instruction-text">
-      Click on the below button to choose rock, paper or scissors
-    </h2>
-    
+		<h2 id="instruction-text">
+			Click on the below button to choose rock, paper or scissors
+		</h2>
+
 		<div class="container" id="container">
-      <div class="player-1" id="player-1">
-        <h3>Player 1</h3>
-        <div class="player-1-pick" id="player-1-pick">
-          You picked rock!
-        </div>
-      </div>
+			<div class="player-1" id="player-1">
+				<div class="player-text">
+					<h3>Player 1</h3>
+				</div>
+				<div class="player-1-pick" id="player-1-pick"></div>
+			</div>
 			<div class="rock-container" id="rock-container">
-				<button type="submit"id="rock-btn" class="btn"><img src="rock.svg" alt="rock" /></button>
-        <h4 class="description">Rock</h4>
-      </div>
-      <div id="paper-container">
-        <button type="submit"id="paper-btn" class="btn"><img src="paper.svg" alt="paper" /></button>
-        <h4 class="description">Paper</h4>
-      </div>
-        <div id="scissors-container">
-          <button type="submit"id=scissors-btn" class="btn"><img src="scissors.svg" alt="scissors" /></button>
-          <h4 class="description">Scissors</h4>
-        </div>
-        <div class="computer" id="computer">
-          <h3>Computer</h3>
-          <div class="computer-pick" id="computer-pick">
-            Computers pick: scissors
-          </div>
-        </div>
-        
+				<button type="submit" id="rock-btn" class="btn">
+					<img src="rock.svg" alt="rock" />
+				</button>
+				<h4 class="description">Rock</h4>
+			</div>
+			<div id="paper-container">
+				<button type="submit" id="paper-btn" class="btn">
+					<img src="paper.svg" alt="paper" />
+				</button>
+				<h4 class="description">Paper</h4>
+			</div>
+			<div id="scissors-container">
+				<button type="submit" id="scissors-btn" class="btn">
+					<img src="scissors.svg" alt="scissors" />
+				</button>
+				<h4 class="description">Scissors</h4>
+			</div>
+			<div class="computer" id="computer">
+				<h3>Computer</h3>
+				<div class="computer-pick" id="computer-pick"></div>
+			</div>
 		</div>
-    <div id="result">
-      <h3>You Won!</h3>
-    </div>
-    <div id="pic-owner">
-      <h5>Images Created by Studio Fibonacci<br>from the Noun Project</h5>
-    </div>
-    <!-- <text x="0" y="105" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Images Created by Studio Fibonacci</text><text x="0" y="110" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text> -->
+		<div id="result">
+			<h3 id="winner">The Winner is?</h3>
+		</div>
+		<div class="btn-reset">
+			<button id="reset">Reset Game</button>
+		</div>
+		<div id="pic-owner">
+			<h5>Images Created by Studio Fibonacci<br />from the Noun Project</h5>
+		</div>
 
 		<script src="script.js"></script>
 	</body>

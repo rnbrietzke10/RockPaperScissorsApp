@@ -1,10 +1,6 @@
-const rock = document.getElementById('rock-btn');
-const paper = document.getElementById('paper-btn');
-const scissors = document.getElementById('scissors-btn');
 const computerChoiceDisplay = document.getElementById('computer-pick');
 const playerChoiceDisplay = document.getElementById('player-1-pick');
 const winner = document.getElementById('winner');
-const resetGame = document.getElementById('reset');
 let playerChoice;
 let computerChoice;
 const choices = ['rock', 'paper', 'scissors'];
@@ -14,28 +10,28 @@ const getComputerChoice = function () {
 	computerChoiceDisplay.textContent = `Computer's pick:  ${computerChoice}`;
 };
 
-rock.addEventListener('click', () => {
+document.getElementById('rock-btn').addEventListener('click', () => {
 	playerChoice = 'rock';
 	playerChoiceDisplay.textContent = 'Your pick: Rock';
 	getComputerChoice();
-	getWinner(playerChoice, computerChoice);
+	determineWinner(playerChoice, computerChoice);
 });
 
-paper.addEventListener('click', () => {
+document.getElementById('paper-btn').addEventListener('click', () => {
 	playerChoice = 'paper';
 	playerChoiceDisplay.textContent = 'Your pick: Paper';
 	getComputerChoice();
-	getWinner(playerChoice, computerChoice);
+	determineWinner(playerChoice, computerChoice);
 });
 
-scissors.addEventListener('click', () => {
+document.getElementById('scissors-btn').addEventListener('click', () => {
 	playerChoice = 'scissors';
 	playerChoiceDisplay.textContent = 'Your pick: Scissors';
 	getComputerChoice();
-	getWinner(playerChoice, computerChoice);
+	determineWinner(playerChoice, computerChoice);
 });
 
-const getWinner = function (player, computer) {
+const determineWinner = function (player, computer) {
 	if (
 		(player === 'scissors' && computer === 'rock') ||
 		(player === 'paper' && computer === 'scissors') ||
@@ -57,11 +53,10 @@ const getWinner = function (player, computer) {
 	}
 };
 
-resetGame.addEventListener('click', () => {
+document.getElementById('reset').addEventListener('click', () => {
 	playerChoice = ' ';
 	playerChoiceDisplay.textContent = '';
 	computerChoiceDisplay.textContent = '';
 	computerChoice = ' ';
-
 	winner.textContent = 'The Winner is?';
 });
